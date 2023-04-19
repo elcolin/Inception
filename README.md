@@ -18,3 +18,6 @@
 	USER_WP=
 	USER_EMAIL=
 	USER_PWD=
+
+Notes and Todo list:
+	https://github.com/ColorGama/Inception/blob/main/Docker_230419_122743.pdf
