@@ -6,16 +6,19 @@
 #    By: elise <elise@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 12:23:27 by elise             #+#    #+#              #
-#    Updated: 2023/04/15 17:48:44 by elise            ###   ########.fr        #
+#    Updated: 2023/05/31 12:36:43 by elise            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = inception
 
-all: stop clean reload
+all: stop clean domain volume reload
 
 domain:
-	@echo "127.0.0.1 ecolin.42.fr" >> /etc/hosts
+	sudo echo "127.0.0.1 ecolin.42.fr" >> /etc/hosts
+volume:
+	mkdir -p ./srcs/vol/mariadb
+	mkdir -p ./srcs/vol/wordpress
 stop:
 	docker-compose -f srcs/docker-compose.yml down
 clean:
@@ -27,5 +30,5 @@ fclean: stop clean
 	docker volume rm -f srcs_wordpress
 reload:
 	docker-compose -f srcs/docker-compose.yml up -d --build
-re: fclean reload
+re: fclean all
 .PHONY: domain stop clean reload fclean all
