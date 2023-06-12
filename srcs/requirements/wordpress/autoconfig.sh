@@ -1,6 +1,9 @@
 #!/bin/bash
-chown -R www-data:www-data /var/www/wordpress
+chown -R $WP_ROOT:$WP_ROOT /var/www/wordpress
 chmod -R 755 /var/www/wordpress
+
+chown -R $WP_ROOT:$WP_ROOT /var/www/
+chmod -R 755 /var/www/
 
 sed -i '/^\[www\]$/a clear_env = no' /etc/php/7.3/fpm/pool.d/www.conf
 sed -i 's/^listen = .*/listen = wordpress:9000/' /etc/php/7.3/fpm/pool.d/www.conf

@@ -53,15 +53,13 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: './vol/wordpress'
-      #home/ecolin/data
+      device: '/home/ecolin/data/wordpress'
   mariadb:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: './vol/mariadb'
-      #home/ecolin/data
+      device: '/home/ecolin/data/mariadb'
 
 networks:
   inception:

@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir -p /var/lib/mysql
+chown mysql:mysql /var/lib/mysql
 chown mysql:mysql /docker-entrypoint-initdb.d/init.sql
 chmod 700 /docker-entrypoint-initdb.d/init.sql
 sed -i "s/\$WP_DATABASE/$WP_DATABASE/g" /docker-entrypoint-initdb.d/init.sql
