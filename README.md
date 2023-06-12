@@ -19,6 +19,21 @@
 	USER_WP=
 	USER_EMAIL=
 	USER_PWD=
+	
+	ROOT_PWD=
+	
+	WP_ROOT=
+	WP_PWD=
+	WP_DATABASE=
+	WP_HOST=
+	
+	WP_ADMIN=
+	WP_ADMIN_PWD=
+	WP_ADMIN_EMAIL=
+	
+	WP_USER=
+	WP_USER_PWD=
+	WP_USER_EMAIL=
 
 if creditential problems:
 rm  ~/.docker/config.json 
