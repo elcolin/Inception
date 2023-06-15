@@ -12,7 +12,7 @@
 
 NAME = inception
 
-all: stop clean volume reload
+all: start reload
 
 domain:
 	sudo echo "127.0.0.1 ecolin.42.fr" >> /etc/hosts
@@ -30,5 +30,7 @@ fclean: stop clean
 	docker volume rm -f srcs_wordpress
 reload:
 	docker-compose -f srcs/docker-compose.yml up -d --build
+start:
+	sudo service docker start
 re: fclean all
 .PHONY: domain stop clean reload fclean all
