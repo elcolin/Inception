@@ -23,7 +23,7 @@ stop:
 	docker-compose -f srcs/docker-compose.yml down
 clean:
 	docker system prune -af
-fclean: stop clean
+fclean: start stop clean
 	rm -rf /home/ecolin/data/mariadb/*
 	rm -rf /home/ecolin/data/wordpress/*
 	docker volume rm -f srcs_mariadb

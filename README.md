@@ -3,11 +3,12 @@
 	
 	Requires to be launched as admin
 	
-	all	-> starts docker, creates if doesn't exist and launchs the containers
+	all	-> starts docker, creates if doesn't exist and launches the containers
 	clean	-> stops, deletes images
 	fclean	-> stops, cleans, deletes images and emptys the volumes
 	stop	-> stops the containers
 	start	-> starts Docker
+	reload	-> builds and launches
 	re	-> fclean all
 
 *------ ENV NOT BEING ALLOWED, HERE IS AN ENV EXAMPLE WITH EMPTY VARIABLES -----*
